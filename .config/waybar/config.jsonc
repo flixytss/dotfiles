@@ -1,0 +1,66 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "height": 40,
+  "output": "DP-1",
+
+  "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
+  "modules-center": [],
+  "modules-right": ["tray", "clock", "battery", "network", "tray", "custom/power"],
+
+  "tray": {
+    "spacing": 5,
+  },
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+  },
+
+  "wlr/taskbar": {
+    "format": "{icon}   {title:.25}",
+    "markup": true,
+    "icon-size": 20,
+    "on-click": "activate",
+  },
+
+  "clock": {
+    "format": "{:>%I:%M:%S \n %m/%d/%y}",
+    "interval": 1,
+    "align": 1,
+    "justify": "right",
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": "Power Off",
+    "on-click": "poweroff",
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}  {capacity: >3}%",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "   {essid} ({signalStrength}%)",
+    "format-ethernet": "  {ifname}",
+    "format-disconnected": "Disconnected ⚠",
+    "tooltip-format": " {ifname} via {gwaddri}",
+    "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+    "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "on-click": "nm-connection-editor",
+    "on-click-right": "nm-connection-editor"
+  },
+  "tray": {
+    "icon-size": 20,
+    "spacing": 10,
+    "show-passive-items": true,
+    "reverse-direction": false,
+    "smooth-scrolling-threshold": 1.0
+  }
+}

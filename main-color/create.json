@@ -1,0 +1,19 @@
+{
+    "project-name": "main-color",
+    "files": [
+        ["src", ".c"]
+    ],
+    "buildir": "build",
+    "compilers-filter": {
+        ".c": "clang"
+    },
+    "run-before": ["@echo Causa-san"],
+    "link-args": ["-lpng", "-lm"],
+    "compile-args": {},
+    "includes": {
+        "clang": "include"
+    },
+    "extra": {
+        "use-ccache": true
+    }
+}
