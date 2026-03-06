@@ -15,6 +15,7 @@ make all
 make install
 cd ..
 cd setter
+mv plugins/* ~/.local/state/swww-general-extensions
 mkdir build
 make all
 make install
