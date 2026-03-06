@@ -6,11 +6,7 @@
 
   "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
   "modules-center": [],
-  "modules-right": ["tray", "clock", "battery", "network", "tray", "custom/power"],
-
-  "tray": {
-    "spacing": 5,
-  },
+  "modules-right": ["clock", "battery", "network", "tray", "custom/power"],
 
   "hyprland/workspaces": {
     "format": "{name}",
